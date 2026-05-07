@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400&family=Inter:wght@400;500&family=Noto+Serif:wght@600;700&family=Space+Grotesk:wght@600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #e9c176;
+  --color-on-primary: #412d00;
+  --color-primary-container: #c5a059;
+  --color-on-primary-container: #4e3700;
+  --color-background: #12131a;
+  --color-surface: #12131a;
+  --color-on-surface: #e2e1eb;
+  --color-on-surface-variant: #d1c5b4;
+  --color-surface-container: #1e1f26;
+  --color-surface-container-low: #1a1b22;
+  --color-surface-container-high: #282a31;
+  --color-surface-container-highest: #33343c;
+  --color-outline-variant: #4e4639;
+  --color-on-tertiary-fixed-variant: #474646;
+
+  --font-display: "Noto Serif", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "Geist Mono", monospace;
+  --font-label: "Space Grotesk", sans-serif;
+
+  @keyframes glint {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-surface font-sans antialiased;
+  }
+}
+
+.animate-glint {
+  animation: glint 1s ease-in-out forwards;
+}
